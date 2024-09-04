@@ -1,0 +1,144 @@
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+page {
+    background: white;
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1cm;
+    margin: auto;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    display: block;
+    position: relative;
+    transform-origin: top left;
+    transform: scale(1);
+}
+
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.information, .Education-Skills, .Projects-Awards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+}
+
+.name-position, .personal-contact, .header-left, .header-right {
+    width: 48%; /* Adjust width to fit content side by side */
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+    border-bottom: 1px solid #3498db;
+    margin-bottom: 05px;
+}
+
+h3 {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 8px 0px;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+.project {
+    font-size: 1em;
+}
+
+.role-date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+    .page {
+        width: 90%; /* Make the width responsive */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: none;
+    }
+
+    .information, .Education-Skills, .Projects-Awards {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .name-position, .personal-contact, .header-left, .header-right {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .page {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    h3 {
+        font-size: 1.1em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page {
+        width: 100%; /* Use full width on mobile */
+        padding: 10px;
+        margin: 0;
+    }
+
+    .name-position, .personal-contact {
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+}
